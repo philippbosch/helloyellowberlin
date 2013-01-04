@@ -31,7 +31,7 @@ html {
 body {
     background: #fffeee;
     color: #222;
-    color: rgba(0,0,0,0.9);
+    color: rgba(0,0,0,0.8);
     font-family: "Source Code Pro", monospace;
     letter-spacing: -1px;
     text-align: center;
@@ -88,6 +88,34 @@ a {
     }
 }
 
+#nav {
+    background: $yellow;
+    text-transform: uppercase;
+
+    ul {
+        @include inline-block-list;
+
+        li {
+            padding: 1em 0;
+            margin-right: 2em;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: rgba(#222, 0.4);
+        @include transition(250ms);
+
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+
 #main {
     line-height: 1.5;
 
@@ -96,7 +124,6 @@ a {
         margin: 0 -10em;
 
         &:first-child {
-            margin-top: -2em;
         }
     }
 
@@ -124,7 +151,7 @@ a {
 }
 
 #team {
-    @include section-container(50%, -0.7deg);
+    @include section-container(30%, -0.7deg);
 
     ul {
         @include clearfix;
@@ -168,7 +195,7 @@ a {
 }
 
 #courses-workshops {
-    @include section-container(10%, 0.4deg);
+    @include section-container(50%, 0.4deg);
 
     ul {
         @include clearfix;
@@ -189,17 +216,17 @@ a {
 }
 
 #blog {
-    @include section-container(30%, 0.1deg);
+    @include section-container(10%, 0.1deg);
 }
 
 #contact {
     @include section-container(0%, -0.3deg, #111);
-    background: mix($yellow, #000, 15%);
-    color: mix($yellow,#999);
+    background: mix($yellow, #000, 5%);
+    color: rgba(mix($yellow, #FFF, 20%), 0.5);
 }
 
 h1 {
-    font-size: 280%;
+    font-size: 400%;
     font-family: "La Belle Aurore";
     text-align: center;
     text-transform: lowercase !important;
