@@ -194,7 +194,7 @@ a {
 
 #contact {
     @include section-container(0%, -0.3deg, #111);
-    background: #111;
+    background: mix($yellow, #000, 15%);
     color: mix($yellow,#999);
 }
 
