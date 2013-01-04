@@ -49,6 +49,7 @@ a {
     background: $yellow;
     padding: 130px 200px 100px;
     margin: -50px -200px 0;
+    position: relative;
 }
 
 #logo {
@@ -91,12 +92,23 @@ a {
 #nav {
     background: $yellow;
     text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        bottom: auto;
+    }
 
     ul {
         @include inline-block-list;
 
         li {
-            padding: 1em 0;
+            padding: 0.75em 0;
             margin-right: 2em;
 
             &:last-child {
@@ -106,17 +118,20 @@ a {
     }
 
     a {
+        display: block;
         text-decoration: none;
-        color: rgba(#222, 0.4);
-        @include transition(250ms);
-
-        &:hover {
-            color: inherit;
-        }
+        color: rgba(#222, 0.5);
     }
+
+    a:hover, li.current a {
+        color: inherit;
+        @include scale(1.2);
+    }
+
 }
 
 #main {
+    position: relative;
     line-height: 1.5;
 
     section {
