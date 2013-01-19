@@ -137,9 +137,6 @@ a {
     section {
         padding: 3em 10em 3em 10em;
         margin: 0 -10em;
-
-        &:first-child {
-        }
     }
 
     .content {
@@ -153,10 +150,14 @@ a {
     @include section-container(30%, 0.4deg);
     @include clearfix;
 
+    h1 {
+        background-image: image-url('__studio__.png');
+    }
+
     img {
         width: 960px;
         height: 400px;
-        -webkit-filter: grayscale(100%);
+        @include filter(grayscale(100%) sepia(50%));
     }
 
     p {
@@ -166,7 +167,11 @@ a {
 }
 
 #team {
-    @include section-container(30%, -0.7deg);
+    @include section-container(50%, -0.7deg);
+
+    h1 {
+        background-image: image-url('__team__.png');
+    }
 
     ul {
         @include clearfix;
@@ -200,6 +205,7 @@ a {
             img {
                 width: 100%;
                 height: 100%;
+                @include filter(grayscale(100%) sepia(50%));
             }
         }
 
@@ -241,18 +247,20 @@ a {
 }
 
 h1 {
-    font-size: 400%;
-    font-family: "La Belle Aurore";
     text-align: center;
-    text-transform: lowercase !important;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-bottom: 2em;
 
-    &:before, &:after {
-        content: "__________";
-        letter-spacing: -8px;
+    span {
+        text-indent: -9999px;
+        display: block;
     }
 }
 
-h1, h2, h3 {
+h2, h3 {
     text-transform: uppercase;
     margin-bottom: 1em;
 }
