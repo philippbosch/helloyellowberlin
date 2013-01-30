@@ -245,13 +245,12 @@ a {
 
             dt {
                 text-transform: uppercase;
-                background-color: mix($yellow, #FFF, 40%);
-                display: inline;
             }
 
             dd {
                 margin-bottom: 1em;
                 font-size: 85%;
+                margin-left: 2em;
 
                 &:last-child {
                     margin-bottom: 0;

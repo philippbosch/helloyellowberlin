@@ -342,20 +342,19 @@ a:hover {
 /* line 246, ../sass/screen.scss */
 #team #qa dl dt {
   text-transform: uppercase;
-  background-color: #fff799;
-  display: inline;
 }
-/* line 252, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 #team #qa dl dd {
   margin-bottom: 1em;
   font-size: 85%;
+  margin-left: 2em;
 }
-/* line 256, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 #team #qa dl dd:last-child {
   margin-bottom: 0;
 }
 
-/* line 264, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
 #contact {
   background: #111111;
   -webkit-box-shadow: #111111 0 100px;
@@ -366,7 +365,7 @@ a:hover {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-/* line 271, ../sass/screen.scss */
+/* line 270, ../sass/screen.scss */
 h1 {
   text-align: center;
   height: 64px;
@@ -375,32 +374,32 @@ h1 {
   background-size: contain;
   margin-bottom: 2em;
 }
-/* line 279, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 h1 span {
   text-indent: -9999px;
   display: block;
 }
 
-/* line 285, ../sass/screen.scss */
+/* line 284, ../sass/screen.scss */
 h2, h3 {
   text-transform: uppercase;
   margin-bottom: 1em;
 }
 
-/* line 290, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 p {
   margin: 1em 0;
 }
-/* line 293, ../sass/screen.scss */
+/* line 292, ../sass/screen.scss */
 p:first-child {
   margin-top: 0;
 }
-/* line 297, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 p:last-child {
   margin-bottom: 0;
 }
 
-/* line 302, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 sup {
   vertical-align: super;
   font-size: smaller;
