@@ -25,4 +25,52 @@ $(document).ready(function() {
     });
 
     $('#nav').sticky();
+
+
+    $.fn.qa = function() {
+        var $elems = $(this),
+            $qa = $('#qa'),
+            $dls = $('dl', $qa),
+            previousQA;
+
+        $dls.each(function() {
+            var $dl = $(this);
+            $dl.data('height', $dl.outerHeight(true));
+        });
+
+        $elems.on('click', function(e) {
+            e.preventDefault();
+
+            var $link = $(this),
+                href = $link.attr('href').substr($link.attr('href').indexOf('#')),
+                $target = $(href);
+
+            if ($qa.is('.open')) {
+                $qa.animate({height: 0}, 250, function() {
+                    $qa.removeClass('open');
+                    $dls.hide();
+                    $target.show();
+                });
+            } else {
+                $dls.hide();
+                $target.show();
+            }
+
+            $elems.closest('li').removeClass('inactive');
+
+            if (href != previousQA) {
+                $elems.not($link).closest('li').addClass('inactive');
+                $qa.animate({height: $target.data('height') + 'px'}, 250, function() {
+                    $qa.addClass('open');
+                    previousQA = href;
+                    $.scrollTo('#team', 250);
+                });
+            } else {
+                previousQA = null;
+            }
+
+        });
+    }
+
+    $('a.qa').qa();
 });
