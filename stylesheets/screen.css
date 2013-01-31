@@ -368,9 +368,9 @@ a:hover {
 #contact .address {
   float: left;
   background: #000;
-  color: rgba(255, 251, 204, 0.5);
-  padding: 1em;
-  margin-left: -1em;
+  color: rgba(255, 251, 204, 0.7);
+  padding: 1.6em 2em;
+  margin-left: -2em;
 }
 /* line 277, ../sass/screen.scss */
 #contact #map {

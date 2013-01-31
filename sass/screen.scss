@@ -269,9 +269,9 @@ a {
     .address {
         float: left;
         background: #000;
-        color: rgba(mix($yellow, #FFF, 20%), 0.5);
-        padding: 1em;
-        margin-left: -1em;
+        color: rgba(mix($yellow, #FFF, 20%), 0.7);
+        padding: 1.6em 2em;
+        margin-left: -2em;
     }
 
     #map {
