@@ -98,9 +98,9 @@ $(document).ready(function() {
             styles: [
               {
                 "stylers": [
-                  { "gamma": 0.16 },
-                  { "hue": "#ffed00" },
-                  { "saturation": -62 },
+                  { "gamma": 0.20 },
+                  { "hue": "#000000" },
+                  { "saturation": -100 },
                   { "lightness": -58 }
                 ]
               },{

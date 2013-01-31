@@ -91,7 +91,7 @@ a {
 }
 /* line 49, ../sass/screen.scss */
 a:hover {
-  color: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
 }
 
 /* line 54, ../sass/screen.scss */
@@ -362,6 +362,10 @@ a:hover {
   box-shadow: #fff9b2 0 100px;
 }
 /* line 266, ../sass/screen.scss */
+#gallery h1 {
+  background-image: url('../images/headlines/bilder.png?1359661530');
+}
+/* line 270, ../sass/screen.scss */
 #gallery .gallery {
   *zoom: 1;
   margin-right: -15px;
@@ -372,27 +376,31 @@ a:hover {
   display: table;
   clear: both;
 }
-/* line 270, ../sass/screen.scss */
+/* line 274, ../sass/screen.scss */
 #gallery .gallery li {
   float: left;
-  width: 160px;
-  height: 160px;
-  padding: 10px;
+  width: 120px;
+  height: 120px;
+  padding: 0px;
   background: #fffef2;
-  margin: 0 15px 15px 0;
+  margin: 0 48px 48px 0;
 }
-/* line 278, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
+#gallery .gallery li:nth-child(6) {
+  margin-right: 0;
+}
+/* line 286, ../sass/screen.scss */
 #gallery .gallery li img {
   width: 100%;
   height: 100%;
 }
 
-/* line 286, ../sass/screen.scss */
+/* line 294, ../sass/screen.scss */
 .fancybox-overlay {
   z-index: 99999;
 }
 
-/* line 290, ../sass/screen.scss */
+/* line 298, ../sass/screen.scss */
 #contact {
   background: #111111;
   -webkit-box-shadow: #111111 0 100px;
@@ -402,15 +410,14 @@ a:hover {
   position: relative;
   height: 500px;
 }
-/* line 296, ../sass/screen.scss */
+/* line 304, ../sass/screen.scss */
 #contact .address {
   float: left;
   background: #000;
   color: rgba(255, 251, 204, 0.7);
   padding: 1.6em 2em;
-  margin-left: -2em;
 }
-/* line 304, ../sass/screen.scss */
+/* line 311, ../sass/screen.scss */
 #contact #map {
   position: absolute;
   z-index: 1;
@@ -419,13 +426,13 @@ a:hover {
   right: 10em;
   bottom: 0;
 }
-/* line 313, ../sass/screen.scss */
+/* line 320, ../sass/screen.scss */
 #contact .content {
   position: relative;
   z-index: 2;
 }
 
-/* line 319, ../sass/screen.scss */
+/* line 326, ../sass/screen.scss */
 h1 {
   text-align: center;
   height: 64px;
@@ -434,38 +441,38 @@ h1 {
   background-size: contain;
   margin-bottom: 2em;
 }
-/* line 327, ../sass/screen.scss */
+/* line 334, ../sass/screen.scss */
 h1 span {
   text-indent: -9999px;
   display: block;
 }
 
-/* line 333, ../sass/screen.scss */
+/* line 340, ../sass/screen.scss */
 h2, h3 {
   text-transform: uppercase;
   margin-bottom: 1em;
 }
 
-/* line 338, ../sass/screen.scss */
+/* line 345, ../sass/screen.scss */
 p {
   margin: 1em 0;
 }
-/* line 341, ../sass/screen.scss */
+/* line 348, ../sass/screen.scss */
 p:first-child {
   margin-top: 0;
 }
-/* line 345, ../sass/screen.scss */
+/* line 352, ../sass/screen.scss */
 p:last-child {
   margin-bottom: 0;
 }
 
-/* line 350, ../sass/screen.scss */
+/* line 357, ../sass/screen.scss */
 sup {
   vertical-align: super;
   font-size: smaller;
 }
 
-/* line 356, ../sass/screen.scss */
+/* line 363, ../sass/screen.scss */
 #opening {
   position: absolute;
   top: 70px;
@@ -480,13 +487,13 @@ sup {
   padding: 0 10em;
   margin: 0 -10em;
 }
-/* line 366, ../sass/screen.scss */
+/* line 373, ../sass/screen.scss */
 #opening a {
   text-decoration: none;
   display: block;
   padding: 1em 0;
 }
-/* line 372, ../sass/screen.scss */
+/* line 379, ../sass/screen.scss */
 #opening strong {
   text-transform: uppercase;
   font-size: 150%;

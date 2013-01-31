@@ -47,7 +47,7 @@ a {
     color: inherit;
 
     &:hover {
-        color: rgba(0,0,0,0.5);
+        opacity: 0.5;
     }
 }
 
@@ -263,17 +263,25 @@ a {
 #gallery {
     @include section-container(30%, -0.7deg);
 
+    h1 {
+        background-image: image-url('headlines/bilder.png');
+    }
+
     .gallery {
         @include pie-clearfix;
         margin-right: -15px;
 
         li {
             float: left;
-            width: 160px;
-            height: 160px;
-            padding: 10px;
+            width: 120px;
+            height: 120px;
+            padding: 0px;
             background: mix($yellow, white, 5%);
-            margin: 0 15px 15px 0;
+            margin: 0 48px 48px 0;
+
+            &:nth-child(6) {
+                margin-right: 0;
+            }
 
             img {
                 width: 100%;
@@ -298,7 +306,6 @@ a {
         background: #000;
         color: rgba(mix($yellow, #FFF, 20%), 0.7);
         padding: 1.6em 2em;
-        margin-left: -2em;
     }
 
     #map {
