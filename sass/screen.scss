@@ -260,6 +260,33 @@ a {
     }
 }
 
+#gallery {
+    @include section-container(30%, -0.7deg);
+
+    .gallery {
+        @include pie-clearfix;
+        margin-right: -15px;
+
+        li {
+            float: left;
+            width: 160px;
+            height: 160px;
+            padding: 10px;
+            background: mix($yellow, white, 5%);
+            margin: 0 15px 15px 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.fancybox-overlay {
+    z-index: 99999;
+}
+
 #contact {
     @include section-container(0%, -0.3deg, #111);
     background: mix($yellow, #000, 5%);

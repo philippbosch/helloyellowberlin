@@ -27,6 +27,13 @@ $(document).ready(function() {
 
     $('#nav').sticky();
 
+    setTimeout(function() {
+        if (location.hash.length && $(location.hash).length) {
+            $.scrollTo(location.hash, 750);
+        }
+    },100);
+
+
     // Q&A
     $.fn.qa = function() {
         var $elems = $(this),
@@ -147,6 +154,12 @@ $(document).ready(function() {
                 fillOpacity: 1.0
             }
         })
+    });
+
+
+    // GALLERY
+    $('.fancybox').fancybox({
+        "loop": false
     });
 
 });
