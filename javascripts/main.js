@@ -71,7 +71,7 @@ $(document).ready(function() {
                 $qa.animate({height: $target.data('height') + 'px'}, 250, function() {
                     $qa.addClass('open');
                     previousQA = href;
-                    $.scrollTo('#team', 250);
+                    //$.scrollTo('#team', 250);
                 });
             } else {
                 previousQA = null;
@@ -83,7 +83,7 @@ $(document).ready(function() {
 
 
     // MAP
-    $(window).on('load', function() {
+    if ($(window).width() > 800) $(window).on('load', function() {
         var mapOptions = {
             center: new google.maps.LatLng(52.493364,13.442381),
             zoom: 15,

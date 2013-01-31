@@ -36,6 +36,7 @@ body {
     font-size: 15px;
     -webkit-font-smoothing: antialiased;
     letter-spacing: -1px;
+    -webkit-text-size-adjust: 100%;
     text-align: center;
     overflow: hidden;
     overflow-y: auto;
@@ -115,6 +116,10 @@ a {
         li {
             padding: 0.75em 0;
             margin-right: 2em;
+
+            @media only screen and (max-width: 400px) {
+                margin-right: 1em;
+            }
 
             &:last-child {
                 margin-right: 0;
@@ -203,6 +208,10 @@ a {
 
         h2 {
             margin-bottom: 0;
+
+            @media only screen and (max-width: 480px) {
+                font-size: 80%;
+            }
         }
 
         p {
@@ -266,17 +275,15 @@ a {
 
     .gallery {
         @include pie-clearfix;
-        margin-right: -15px;
 
         li {
             float: left;
-            width: 120px;
-            height: 120px;
+            width: 12.5%;
             padding: 0px;
-            background: mix($yellow, white, 5%);
-            margin: 0 48px 48px 0;
+            margin-right: 5%;
+            margin-bottom: 5%;
 
-            &:nth-child(6) {
+            &:last-child {
                 margin-right: 0;
             }
 
@@ -285,6 +292,18 @@ a {
                 height: 100%;
             }
         }
+
+        @media only screen and (max-width: 800px) {
+            li {
+                width: 20%;
+                margin-right: 6.666%;
+
+                &:nth-child(4), &:nth-child(8) {
+                    margin-right: 0;
+                }
+            }
+        }
+
     }
 }
 
@@ -294,7 +313,7 @@ a {
 
 #contact {
     @include section-container(0%, -0.3deg, #111);
-    background: mix($yellow, #000, 5%);
+    background: #000;
     position: relative;
     height: 500px;
     border: 0 !important;
@@ -305,6 +324,18 @@ a {
         color: rgba(mix($yellow, #FFF, 20%), 0.7);
         padding: 1.6em 2em;
     }
+
+    @media only screen and (max-width: 800px) {
+        border-left: 20px solid transparent !important;
+        border-right: 20px solid transparent !important;
+        height: auto;
+
+        .address {
+            float: none;
+            padding: 0;
+        }
+    }
+
 
     #map {
         position: absolute;
@@ -377,6 +408,7 @@ img {
         font-size: 75%;
         top: 40px;
         left: 0;
+        display: none;
     }
 
     a {
