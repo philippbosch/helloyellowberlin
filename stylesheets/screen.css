@@ -477,14 +477,16 @@ sup {
   -ms-transform: rotate(-30deg);
   -o-transform: rotate(-30deg);
   transform: rotate(-30deg);
-  padding: 1em 10em;
+  padding: 0 10em;
   margin: 0 -10em;
 }
 /* line 366, ../sass/screen.scss */
 #opening a {
   text-decoration: none;
+  display: block;
+  padding: 1em 0;
 }
-/* line 370, ../sass/screen.scss */
+/* line 372, ../sass/screen.scss */
 #opening strong {
   text-transform: uppercase;
   font-size: 150%;

@@ -360,11 +360,13 @@ sup {
     background: #FFF;
     color: #222;
     @include rotate(-30deg);
-    padding: 1em 10em;
+    padding: 0 10em;
     margin: 0 -10em;
 
     a {
         text-decoration: none;
+        display: block;
+        padding: 1em 0;
     }
 
     strong {
