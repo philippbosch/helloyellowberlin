@@ -263,8 +263,30 @@ a {
 #contact {
     @include section-container(0%, -0.3deg, #111);
     background: mix($yellow, #000, 5%);
-    color: rgba(mix($yellow, #FFF, 20%), 0.5);
-    -webkit-font-smoothing: subpixel-antialiased;
+    position: relative;
+    height: 500px;
+
+    .address {
+        float: left;
+        background: #000;
+        color: rgba(mix($yellow, #FFF, 20%), 0.5);
+        padding: 1em;
+        margin-left: -1em;
+    }
+
+    #map {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 10em;
+        right: 10em;
+        bottom: 0;
+    }
+
+    .content {
+        position: relative;
+        z-index: 2;
+    }
 }
 
 h1 {
@@ -302,3 +324,4 @@ sup {
     vertical-align: super;
     font-size: smaller;
 }
+

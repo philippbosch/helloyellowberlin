@@ -19,6 +19,7 @@ $.fn.sticky = function() {
 };
 
 $(document).ready(function() {
+    // NAVIGATION
     $('#nav').onePageNav({
         currentClass: 'current',
         changeHash: true
@@ -26,7 +27,7 @@ $(document).ready(function() {
 
     $('#nav').sticky();
 
-
+    // Q&A
     $.fn.qa = function() {
         var $elems = $(this),
             $qa = $('#qa'),
@@ -68,9 +69,84 @@ $(document).ready(function() {
             } else {
                 previousQA = null;
             }
-
         });
     }
 
     $('a.qa').qa();
+
+
+    // MAP
+    $(window).on('load', function() {
+        var mapOptions = {
+            center: new google.maps.LatLng(52.493364,13.442381),
+            zoom: 15,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            disableDefaultUI: true,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.SMALL,
+                position: google.maps.ControlPosition.TOP_RIGHT
+            },
+            styles: [
+              {
+                "stylers": [
+                  { "gamma": 0.16 },
+                  { "hue": "#ffed00" },
+                  { "saturation": -62 },
+                  { "lightness": -58 }
+                ]
+              },{
+                "featureType": "poi.business",
+                "stylers": [
+                  { "visibility": "off" }
+                ]
+              },{
+                "featureType": "road.arterial",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  { "color": "#ffffff" },
+                  { "lightness": -21 }
+                ]
+              },{
+                "featureType": "poi.park",
+                "stylers": [
+                  { "visibility": "on" },
+                  { "lightness": 14 }
+                ]
+              },{
+                "featureType": "road.highway",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  { "visibility": "on" },
+                  { "color": "#ffffff" },
+                  { "lightness": -21 }
+                ]
+              },{
+                "featureType": "road.highway",
+                "elementType": "labels.icon",
+                "stylers": [
+                  { "hue": "#6eff00" },
+                  { "lightness": 40 },
+                  { "visibility": "off" }
+                ]
+              }
+            ]
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var studioLatLng = new google.maps.LatLng(52.493264,13.447681);
+        var studioMarker = new google.maps.Marker({
+            position: studioLatLng,
+            map: map,
+            title: "hello yellow studio berlin",
+            icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                scale: 5,
+                strokeColor: '#ffed00',
+                fillColor: '#ffed00',
+                fillOpacity: 1.0
+            }
+        })
+    });
+
 });
