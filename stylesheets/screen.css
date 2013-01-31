@@ -426,3 +426,28 @@ sup {
   vertical-align: super;
   font-size: smaller;
 }
+
+/* line 329, ../sass/screen.scss */
+#opening {
+  position: absolute;
+  top: 70px;
+  left: 10px;
+  background: #FFF;
+  color: #222;
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  padding: 1em 10em;
+  margin: 0 -10em;
+}
+/* line 339, ../sass/screen.scss */
+#opening a {
+  text-decoration: none;
+}
+/* line 343, ../sass/screen.scss */
+#opening strong {
+  text-transform: uppercase;
+  font-size: 150%;
+}
