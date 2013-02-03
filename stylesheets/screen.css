@@ -389,38 +389,43 @@ a:hover {
 #gallery .gallery li {
   float: left;
   width: 12.5%;
-  height: auto;
   padding: 0px;
   margin-right: 5%;
   margin-bottom: 5%;
 }
-/* line 287, ../sass/screen.scss */
+/* line 286, ../sass/screen.scss */
 #gallery .gallery li:last-child {
   margin-right: 0;
 }
-/* line 291, ../sass/screen.scss */
+/* line 290, ../sass/screen.scss */
 #gallery .gallery li img {
   width: 100%;
   height: 100%;
 }
+@media only screen and (min-width: 1024px) {
+  /* line 297, ../sass/screen.scss */
+  #gallery .gallery li {
+    height: 120px;
+  }
+}
 @media only screen and (max-width: 800px) {
-  /* line 298, ../sass/screen.scss */
+  /* line 303, ../sass/screen.scss */
   #gallery .gallery li {
     width: 20%;
     margin-right: 6.666%;
   }
-  /* line 302, ../sass/screen.scss */
+  /* line 307, ../sass/screen.scss */
   #gallery .gallery li:nth-child(4), #gallery .gallery li:nth-child(8) {
     margin-right: 0;
   }
 }
 
-/* line 311, ../sass/screen.scss */
+/* line 316, ../sass/screen.scss */
 .fancybox-overlay {
   z-index: 99999;
 }
 
-/* line 315, ../sass/screen.scss */
+/* line 320, ../sass/screen.scss */
 #contact {
   background: #111111;
   -webkit-box-shadow: #111111 0 100px;
@@ -431,7 +436,7 @@ a:hover {
   height: 500px;
   border: 0 !important;
 }
-/* line 322, ../sass/screen.scss */
+/* line 327, ../sass/screen.scss */
 #contact .address {
   float: left;
   background: #000;
@@ -439,19 +444,19 @@ a:hover {
   padding: 1.6em 2em;
 }
 @media only screen and (max-width: 800px) {
-  /* line 315, ../sass/screen.scss */
+  /* line 320, ../sass/screen.scss */
   #contact {
     border-left: 20px solid transparent !important;
     border-right: 20px solid transparent !important;
     height: auto;
   }
-  /* line 334, ../sass/screen.scss */
+  /* line 339, ../sass/screen.scss */
   #contact .address {
     float: none;
     padding: 0;
   }
 }
-/* line 341, ../sass/screen.scss */
+/* line 346, ../sass/screen.scss */
 #contact #map {
   position: absolute;
   z-index: 1;
@@ -460,13 +465,13 @@ a:hover {
   right: 10em;
   bottom: 0;
 }
-/* line 350, ../sass/screen.scss */
+/* line 355, ../sass/screen.scss */
 #contact .content {
   position: relative;
   z-index: 2;
 }
 
-/* line 356, ../sass/screen.scss */
+/* line 361, ../sass/screen.scss */
 h1 {
   text-align: center;
   height: 64px;
@@ -475,45 +480,45 @@ h1 {
   background-size: contain;
   margin-bottom: 2em;
 }
-/* line 364, ../sass/screen.scss */
+/* line 369, ../sass/screen.scss */
 h1 span {
   text-indent: -9999px;
   display: block;
 }
 
-/* line 370, ../sass/screen.scss */
+/* line 375, ../sass/screen.scss */
 h2, h3 {
   text-transform: uppercase;
   margin-bottom: 1em;
 }
 
-/* line 375, ../sass/screen.scss */
+/* line 380, ../sass/screen.scss */
 p {
   margin: 1em 0;
 }
-/* line 378, ../sass/screen.scss */
+/* line 383, ../sass/screen.scss */
 p:first-child {
   margin-top: 0;
 }
-/* line 382, ../sass/screen.scss */
+/* line 387, ../sass/screen.scss */
 p:last-child {
   margin-bottom: 0;
 }
 
-/* line 387, ../sass/screen.scss */
+/* line 392, ../sass/screen.scss */
 sup {
   vertical-align: super;
   font-size: smaller;
 }
 
-/* line 392, ../sass/screen.scss */
+/* line 397, ../sass/screen.scss */
 img {
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 1px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 1px;
 }
 
-/* line 397, ../sass/screen.scss */
+/* line 402, ../sass/screen.scss */
 #opening {
   position: absolute;
   top: 70px;
@@ -530,7 +535,7 @@ img {
   line-height: 1.3;
 }
 @media only screen and (max-width: 600px) {
-  /* line 397, ../sass/screen.scss */
+  /* line 402, ../sass/screen.scss */
   #opening {
     font-size: 75%;
     top: 40px;
@@ -538,13 +543,13 @@ img {
     display: none;
   }
 }
-/* line 415, ../sass/screen.scss */
+/* line 420, ../sass/screen.scss */
 #opening a {
   text-decoration: none;
   display: block;
   padding: 1em 0;
 }
-/* line 421, ../sass/screen.scss */
+/* line 426, ../sass/screen.scss */
 #opening strong {
   text-transform: uppercase;
   font-size: 150%;
